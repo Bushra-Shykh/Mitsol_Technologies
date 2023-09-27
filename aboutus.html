@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitsol Tech</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="custom.scss">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lightbox.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,600;1,300;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+</head>
+<body>
+<!----Time line  Css for About us Page Design Add-->
+  <style>
+    
+
+.timeline {
+display: flex;
+margin: 0 auto;
+flex-wrap: wrap;
+flex-direction: column;
+max-width: 700px;
+position: relative;
+}
+.timeline__content-title {
+font-weight: normal;
+font-size: 50px;
+margin: -10px 0 0 0;
+transition: 0.4s;
+padding:1rem 0px;
+box-sizing: border-box;
+font-family: 'Oswald', sans-serif;
+color: #fff;
+text-align: center;
+}
+.timeline__content-desc {
+margin: 0;
+font-size: 15px;
+box-sizing: border-box;
+color: rgba(255, 255, 255, .7);
+font-family: 'Roboto Condensed', sans-serif;
+font-weight: normal;
+line-height: 25px;
+text-align: justify;
+}
+.timeline:before {
+position: absolute;
+left: 50%;
+width: 2px;
+height: 100%;
+margin-left: -1px;
+content: "";
+background: rgba(255, 255, 255, .07);
+}
+@media only screen and (max-width: 767px) {
+.timeline:before {
+left: 40px;
+}
+}
+.timeline-item {
+padding: 40px 0;
+opacity: 0.3;
+filter: blur(2px);
+transition: 0.5s;
+box-sizing: border-box;
+width: calc(50% - 40px);
+display: flex;
+position: relative;
+transform: translateY(-80px);
+}
+.timeline-item:before {
+content: attr(data-text);
+letter-spacing: 3px;
+width: 100%;
+position: absolute;
+color: rgba(255, 255, 255, .5);
+font-size: 13px;
+font-family: 'Pathway Gothic One', sans-serif;
+border-left: 2px solid rgba(255, 255, 255, .5);
+top: 70%;
+margin-top: -5px;
+padding-left: 15px;
+opacity: 0;
+right: calc(-100% - 56px);
+}
+.timeline-item:nth-child(even) {
+align-self: flex-end;
+}
+.timeline-item:nth-child(even):before {
+right: auto;
+text-align: right;
+left: calc(-100% - 56px);
+padding-left: 0;
+border-left: none;
+border-right: 2px solid rgba(255, 255, 255, .5);
+padding-right: 15px;
+}
+.timeline-item--active {
+opacity: 1;
+transform: translateY(0);
+filter: blur(0px);
+}
+.timeline-item--active:before {
+top: 50%;
+transition: 0.3s all 0.2s;
+opacity: 1;
+}
+.timeline-item--active .timeline__content-title {
+margin: px 0 20px 0;
+}
+@media only screen and (max-width: 767px) {
+.timeline-item {
+align-self: baseline !important;
+width: 100%;
+padding: 0 30px 150px 80px;
+}
+.timeline-item:before {
+left: 10px !important;
+padding: 0 !important;
+top: 50px;
+text-align: center !important;
+width: 60px;
+border: none !important;
+}
+.timeline-item:last-child {
+padding-bottom: 40px;
+}
+}
+.timeline__img {
+max-width: 100%;
+box-shadow: 0 10px 15px rgba(0, 0, 0, .4);
+}
+.timeline-container {
+width: 100%;
+position: relative;
+padding: 80px 0;
+transition: 0.3s ease 0s;
+background-attachment: fixed;
+background-size: cover;
+}
+.timeline-container:before {
+position: absolute;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.6);
+content: "";
+}
+.timeline-header {
+width: 100%;
+text-align: center;
+margin-bottom: 80px;
+position: relative;
+}
+.timeline-header__title {
+color: #fff;
+font-size: 58px;
+font-family: 'Oswald', sans-serif;
+font-weight: normal;
+margin: 0;
+}
+.timeline-header__subtitle {
+color: rgba(255, 255, 255, .5);
+font-family: 'Pathway Gothic One', sans-serif;
+font-size: 16px;
+letter-spacing: 5px;
+margin: 10px 0 0 0;
+font-weight: normal;
+}
+.demo-footer {
+padding: 60px 0;
+text-align: center;
+}
+.demo-footer a {
+color: #999;
+display: inline-block;
+font-family: Cardo;
+}
+
+</style>
+<!----Time line Css for About us Page Design End-->
+</head>
+<body>
+
+   <!---Header Added-->
+   <header>
+    <nav>
+      <div class="wrapper">
+        <div class="logo"><a href="#">MITSOL</a></div>
+        <input type="radio" name="slider" id="menu-btn">
+        <input type="radio" name="slider" id="close-btn">
+        <ul class="nav-links">
+          <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li>
+            <a href="#" class="desktop-item">Services</a>
+            <input type="checkbox" id="showMega">
+            <label for="showMega" class="mobile-item">Services</label>
+            <div class="mega-box">
+              <div class="content">
+                <div class="row">
+                 
+                  <ul class="mega-links">
+                    <li><a href="digital-marketing.html">Digital Marketing</a></li>
+                    <p>
+                      We plan to cause your business to develop on the grounds that your prosperity is our prosperities
+                    </p>
+                  </ul>
+                  <ul class="mega-links">
+                    <li><a href="">Website Development</a></li>
+                    <p>
+                      We've covered "what is WordPress" and "what is WordPress utilized for" yet to comprehend its advantages.
+                    </p>
+                  </ul>
+                  <ul class="mega-links">
+                    <li><a href="#">UI/UX Designing</a></li>
+                    <p>
+                      
+                    In a nutshell UI/UX design makes IT item that clients want to utilize. The objective of UI sketch is creating buyer interfaces
+                    </p>
+                  </ul>
+                  
+                </div>
+                <div class="row">
+                  <ul class="mega-links">
+                    <li><a href="#">Mobile Application Development</a></li>
+                    <p>
+                      Mitsol's mixture versatile application development improvement group is very capable.
+                    </p>
+                  </ul>
+                  <ul class="mega-links">
+                    <li><a href="#">Video Editing</a></li>
+                    <p>
+                      From a specialized point of view, videography alludes to the computerized seize of moving photos
+                    </p>
+                  </ul>
+                  <ul class="mega-links">
+                    <li><a href="#">Custom Development</a></li>
+                    <p>
+                      We give you an answer that addresses your issues, your guests' assumptions, and you will have command over your substance
+                    </p>
+                  </ul>
+
+                </div>
+                <div class="row">
+                  <img src="https://cdn.shopify.com/s/files/1/0667/6555/3895/files/web_developing.gif?v=1665571693" alt="">
+                </div>
+              </div>
+            </div>
+          </li>
+            
+          <li>
+            <a href="#" class="desktop-item">Services</a>
+            <input type="checkbox" id="showMega">
+            <label for="showMega" class="mobile-item">Mega Menu</label>
+            <div class="mega-box">
+              <div class="content">
+                <div class="row">
+                  <header>Digital Marketing</header>
+                  <ul class="mega-links">
+                    <li><a href="#">Graphics</a></li>
+                    <li><a href="#">Vectors</a></li>
+                    <li><a href="#">Business cards</a></li>
+                    <li><a href="#">Custom logo</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <header>Email Services</header>
+                  <ul class="mega-links">
+                    <li><a href="#">Personal Email</a></li>
+                    <li><a href="#">Business Email</a></li>
+                    <li><a href="#">Mobile Email</a></li>
+                    <li><a href="#">Web Marketing</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <header>Security services</header>
+                  <ul class="mega-links">
+                    <li><a href="#">Site Seal</a></li>
+                    <li><a href="#">VPS Hosting</a></li>
+                    <li><a href="#">Privacy Seal</a></li>
+                    <li><a href="#">Website design</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <img src="https://cdn.shopify.com/s/files/1/0667/6555/3895/files/web_developing.gif?v=1665571693" alt="">
+                </div>
+              </div>
+            </div>
+          </li>
+            
+        
+           
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="get-a-quote.html">Get a Quote</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+
+        </ul>
+          <a class="button-homepage" href="#" role="button">Book A Call</a>
+      
+       
+        <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+      </div>
+    </nav>
+     
+      
+ </header>
+  <!---Header Ended-->
+
+
+
+
+  <!--Introduction Started Section -->
+ <section class="about-us-introduction">
+    <div class="introduction">
+        <h2>ABOUT US</h2>
+        <br>
+        <br>
+       <h1>How Do We Work To<br> Maintain Close To 100% <br>Customer Retention?<br> Company</h1>
+       <br>
+       <p>Mitsol is a computerized showcasing organization that knows how to<br> help your web-based business' positioning and give its clients with<br> results that are above and beyond.</p>
+         <br>
+         <br>
+         <a class="button-left" href="#" role="button">Book A Call</a>
+    </div>
+</section>
+<!--Introduction Ended Section --->
+<!---BRANDS ADDED -->
+<section>
+  <div class="brands p-2">
+      <h1 style="color: black; font-weight: 700; text-align: center;">Brands</h1>
+  </div>
+
+  <div class="container-fluid p-4">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-6">
+        <div class="col p-3">
+          <img src="https://www.mitsol.tech/assets/img/brands/brand8.svg" class="img-fluid" alt="Responsive image"> 
+        </div>
+        <div class="col">
+          <img src="https://www.mitsol.tech/assets/img/brands/brand5.svg">
+        </div>
+        <div class="col p-2"> 
+          <img src="https://www.mitsol.tech/assets/img/brands/brand7.svg">
+      </div>
+      <div class="col p-1"> 
+          <img src="https://www.mitsol.tech/assets/img/brands/brand6.svg">
+      </div>
+        <div class="col p-1">
+          <img src="https://www.mitsol.tech/assets/img/brands/brand3.svg">
+        </div>
+      </div>
+    </div>
+</section>
+<!---BRANDS ENDED->
+
+<!-Time Line Started Section-->
+
+<div class="timeline-container" id="timeline-1">
+    <div class="timeline-header">
+    <h2 class="timeline-header__title">We Follow An Amazing 5 Process Of Success</h2>
+    <h3 class="timeline-header__subtitle">“Good teams incorporate teamwork into their culture, <br>creating the building blocks for success.”</h3>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item" data-text="01 :  06-10-2022">
+      <div class="timeline__content"><img class="timeline__img" src="https://media.istockphoto.com/id/530685797/photo/group-of-business-people-standing-and-talking-in-office.jpg?b=1&s=170667a&w=0&k=20&c=9tdONOxG8unyDWBC3ZeHy04HVixD5rY3ZlKf9_WCut4=" />
+        <h2 class="timeline__content-title">Start A Conversation</h2>
+        <p class="timeline__content-desc">YOnce we understand what you want, you can choose how you want to pay. Hiring dedicated developers is often 20% cheaper, but it may not always be the right solution. For example, a fixed cost project may be more ideal for you than hiring dedicated staff or vice versa.</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="02 :  06-10-2022">
+      <div class="timeline__content"><img class="timeline__img" src="https://media.istockphoto.com/id/1407354641/photo/group-of-diverse-executive-managers-doing-paperwork-at-meeting.jpg?b=1&s=170667a&w=0&k=20&c=68_dYMgVILLmUprxyZTsi2giEmgbeBOfmqsf8x4cD6w="/>
+        <h2 class="timeline__content-title">Choose Engagement</h2>
+        <p class="timeline__content-desc">If you need a fixed price quote, we will submit an estimate with timeline and price. If you decide to hire developers, we can make that happen, too. Unlike some of our competition, we don't assign unknown or untrusted individuals to work for our clients. Each of our employees has been with us for over three years.</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="03 :  06-10-2022">
+      <div class="timeline__content"><img class="timeline__img" src="https://us.123rf.com/450wm/whyframeshot/whyframeshot2206/whyframeshot220602025/whyframeshot220602025.jpg?ver=6"/>
+        <h2 class="timeline__content-title">Review Pricing Options</h2>
+        <p class="timeline__content-desc">If you need a fixed price quote, we will submit an estimate with timeline and price. If you decide to hire developers, we can make that happen, too. Unlike some of our competition, we don't assign unknown or untrusted individuals to work for our clients. Each of our employees has been with us for over three years.</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="04 :  06-10-2022">
+      <div class="timeline__content"><img class="timeline__img" src="https://media.istockphoto.com/id/1184334685/photo/always-brainstorming.jpg?s=612x612&w=0&k=20&c=D8Gde-M3TkbrOuLWj4F8VPmHLgMDULT_VlQ3tsnuVn4="/>
+        <h2 class="timeline__content-title">Get Started</h2>
+        <p class="timeline__content-desc">We commence development. If we’re doing a fixed-price project, then your point of contact will be a project manager who will get in touch with you. If however, you are hiring developers then they will be put under your direct control and actively supervised by us. The focus in both cases is to make progress and get things done as quickly as possible.</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="05 :  06-10-2022">
+      <div class="timeline__content"><img class="timeline__img" src="images/6.png"/>
+        <h2 class="timeline__content-title">Get Results</h2>
+        <p class="timeline__content-desc">You can use and leverage our development infrastructure including servers, softwares, and project management tools. For dedicated hiring, we work on your servers directly and provide you with real time access to source codes and timesheet entries. Our leadership team will be with you at all times throughout the project to ensure success.</p>
+      </div>
+    </div>
+    </div>
+    </div>
+ <!----Time line Ended Design-->
+    
+<!--Contact US Started-->
+<section class="contactus-1">
+  <div class="container-1">
+    <div style="text-align:center">
+      <h1>We’d Love To Hear From You
+      </h1>
+      <p>Get Custom Solutions, Recommendations, Resumes, Or, Estimates.<br> Confidentiality & Same Day Response Guaranteed!</p>
+    </div>
+    <div class="row-1">
+      <div class="column-1">
+        <img src="images/animation.gif" style="width:100%;height: 459px;padding-top: 30px;" ;="" height="252px" padding-top:="" 50px;="">       
+      </div>
+      <div class="column-1">
+        <form action="/action_page.php">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </div>
+  </section>
+  <!---Contact US  Ended-->
+
+
+<!---Start Your Business With Us Started-->
+<section class="last-banner">
+  <div class="lastbookus">
+    <br>
+   
+      <h1>Start Your Business With Us</h1>
+      <br>
+      <br>
+      <a class="button-left" href="#" role="button">Book a Call</a>
+  </div>
+     
+    </div>
+  </section>
+  <!---Start Your Business With Us Ended-->
+  
+  <!---Footer Started-->
+<footer class="section bg-footer">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-3">
+              <div class="">
+                  <h6 class="footer-heading text-uppercase text-white">MITSOL.</h6>
+                  <p class="contact-info mt-4 text-justify">Mitsol Technology - A leading offshore IT outsourcing company offers Custom Web, Mobile App & Software development services all over the globe. Also, we allocate dedicated expert teams to help agencies and businesses scale their Development,<br> Design & Digital Marketing capabilities.</p>
+                  
+                  
+              </div>
+              <div class="mt-3">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#"><i class="fab facebook footer-social-icon fa-facebook-f"></i></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fab twitter footer-social-icon fa-twitter"></i></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fab google footer-social-icon fa-google"></i></i></a></li>
+                    
+                </ul>
+            </div>
+          </div>
+          
+
+          <div class="col-lg-3">
+              <div class="">
+                  <h6 class="footer-heading text-uppercase text-white">Ressources</h6>
+                  <ul class="list-unstyled footer-link mt-4">
+                      <li><a href="">Website Development </a></li>
+                      <li><a href="">UI/UX Designing</a></li>
+                      <li><a href="">Mobile Application Development</a></li>
+                      <li><a href="">Digital Marketing</a></li>
+                      <li><a href="">Video Editing</a></li>
+                      <li><a href="">Custom Development</a></li>
+                  </ul>
+              </div>
+          </div>
+
+          <div class="col-lg-2">
+              <div class="">
+                  <h6 class="footer-heading text-uppercase text-white">Help</h6>
+                  <ul class="list-unstyled footer-link mt-4">
+                      <li><a href="">Home </a></li>
+                      <li><a href="">About Us</a></li>
+                      <li><a href="">Careers</a></li>
+                      <li><a href="">Get A Quote</a></li>
+                      <li><a href="">Contact Us</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="">
+                <h5 class="footer-heading text-uppercase text-white">Contact Info</h5>
+                <p class="item-heading widget-heading  h6 text-white">US Address</p>
+                <ul class="list-unstyled footer-link mt-4">
+                    <li><a href=""><i class="fa fa-map-marker" aria-hidden="true">  100 Pine St #2500, San Francisco, CA 94111, United States</i>
+                      <li><a href=""><i class="fa fa-mobile h6 text-white"></i>  +18632046184</i>
+                        <p class="item-heading widget-heading  h6 text-blue">Pakistan Address</p>
+                        <li><a href=""><i class="fa fa-map-marker" aria-hidden="true">  Ls-01, Bungalow No# C-65 Federal B Area Block 10 Gulberg Town, Karachi, Karachi City, Sindh</i>
+                          <li><a href=""><i class="fa fa-mobile h6 text-white"></i>  +923330188996</i>
+                            <li><a href=""><i class="fa fa-envelope h6 text-white">  info@mitsol.tech</i>
+                   
+                </ul>
+            </div>
+        </div>
+         
+
+      </div>
+  </div>
+
+  <div class="text-center mt-5">
+      <p class="footer-alt mb-0 f-14 text-white text-decoration-none">2022 © MITSOL, All Rights Reserved</p>
+  </div>
+</footer>
+
+<!---Footer Ended-->
+
+    <!----Script Added-->   
+    <script type="text/javascript" src="main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="lightbox-plus-jquery.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script src='https://rubaxa.github.io/Sortable/Sortable.js'></script><script  src="main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <!----Time Line Script Added-->
+        <script>
+        
+        (function($) {
+        $.fn.timeline = function() {
+        var selectors = {
+          id: $(this),
+          item: $(this).find(".timeline-item"),
+          activeClass: "timeline-item--active",
+          img: ".timeline__img"
+        };
+        selectors.item.eq(0).addClass(selectors.activeClass);
+        selectors.id.css(
+          "background-image",
+          "url(" +
+            selectors.item
+              .first()
+              .find(selectors.img)
+              .attr("src") +
+            ")"
+        );
+        var itemLength = selectors.item.length;
+        $(window).scroll(function() {
+          var max, min;
+          var pos = $(this).scrollTop();
+          selectors.item.each(function(i) {
+            min = $(this).offset().top;
+            max = $(this).height() + $(this).offset().top;
+            var that = $(this);
+            if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
+              selectors.item.removeClass(selectors.activeClass);
+              selectors.id.css(
+                "background-image",
+                "url(" +
+                  selectors.item
+                    .last()
+                    .find(selectors.img)
+                    .attr("src") +
+                  ")"
+              );
+              selectors.item.last().addClass(selectors.activeClass);
+            } else if (pos <= max - 40 && pos >= min) {
+              selectors.id.css(
+                "background-image",
+                "url(" +
+                  $(this)
+                    .find(selectors.img)
+                    .attr("src") +
+                  ")"
+              );
+              selectors.item.removeClass(selectors.activeClass);
+              $(this).addClass(selectors.activeClass);
+            }
+          });
+        });
+        };
+        })(jQuery);
+        
+        $("#timeline-1").timeline();
+        
+        </script>
+         <!----Time Line Script Ended-->
+
+
+    </body>
+    </html>
+
+

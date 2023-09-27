@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitsol Tech</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.scss">
+    <link rel="stylesheet" href="lightbox.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,600;1,300;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+
+</head>
+<body>
+<body>
+        <!----Time line  Css for About us Page Design Add-->
+          <style>
+            
+        
+        .timeline {
+        display: flex;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        flex-direction: column;
+        max-width: 700px;
+        position: relative;
+        }
+        .timeline__content-title {
+        font-weight: normal;
+        font-size: 50px;
+        margin: -10px 0 0 0;
+        transition: 0.4s;
+        padding:1rem 0px;
+        box-sizing: border-box;
+        font-family: 'Oswald', sans-serif;
+        color: #fff;
+        text-align: center;
+        }
+        .timeline__content-desc {
+        margin: 0;
+        font-size: 15px;
+        box-sizing: border-box;
+        color: rgba(255, 255, 255, .7);
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: normal;
+        line-height: 25px;
+        text-align: justify;
+        }
+        .timeline:before {
+        position: absolute;
+        left: 50%;
+        width: 2px;
+        height: 100%;
+        margin-left: -1px;
+        content: "";
+        background: rgba(255, 255, 255, .07);
+        }
+        @media only screen and (max-width: 767px) {
+        .timeline:before {
+        left: 40px;
+        }
+        }
+        .timeline-item {
+        padding: 40px 0;
+        opacity: 0.3;
+        filter: blur(2px);
+        transition: 0.5s;
+        box-sizing: border-box;
+        width: calc(50% - 40px);
+        display: flex;
+        position: relative;
+        transform: translateY(-80px);
+        }
+        .timeline-item:before {
+        content: attr(data-text);
+        letter-spacing: 3px;
+        width: 100%;
+        position: absolute;
+        color: rgba(255, 255, 255, .5);
+        font-size: 13px;
+        font-family: 'Pathway Gothic One', sans-serif;
+        border-left: 2px solid rgba(255, 255, 255, .5);
+        top: 70%;
+        margin-top: -5px;
+        padding-left: 15px;
+        opacity: 0;
+        right: calc(-100% - 56px);
+        }
+        .timeline-item:nth-child(even) {
+        align-self: flex-end;
+        }
+        .timeline-item:nth-child(even):before {
+        right: auto;
+        text-align: right;
+        left: calc(-100% - 56px);
+        padding-left: 0;
+        border-left: none;
+        border-right: 2px solid rgba(255, 255, 255, .5);
+        padding-right: 15px;
+        }
+        .timeline-item--active {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0px);
+        }
+        .timeline-item--active:before {
+        top: 50%;
+        transition: 0.3s all 0.2s;
+        opacity: 1;
+        }
+        .timeline-item--active .timeline__content-title {
+        margin: px 0 20px 0;
+        }
+        @media only screen and (max-width: 767px) {
+        .timeline-item {
+        align-self: baseline !important;
+        width: 100%;
+        padding: 0 30px 150px 80px;
+        }
+        .timeline-item:before {
+        left: 10px !important;
+        padding: 0 !important;
+        top: 50px;
+        text-align: center !important;
+        width: 60px;
+        border: none !important;
+        }
+        .timeline-item:last-child {
+        padding-bottom: 40px;
+        }
+        }
+        .timeline__img {
+        max-width: 100%;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, .4);
+        }
+        .timeline-container {
+        width: 100%;
+        position: relative;
+        padding: 80px 0;
+        transition: 0.3s ease 0s;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+        .timeline-container:before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.6);
+        content: "";
+        }
+        .timeline-header {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 80px;
+        position: relative;
+        }
+        .timeline-header__title {
+        color: #fff;
+        font-size: 58px;
+        font-family: 'Oswald', sans-serif;
+        font-weight: normal;
+        margin: 0;
+        }
+        .timeline-header__subtitle {
+        color: rgba(255, 255, 255, .5);
+        font-family: 'Pathway Gothic One', sans-serif;
+        font-size: 16px;
+        letter-spacing: 5px;
+        margin: 10px 0 0 0;
+        font-weight: normal;
+        }
+        .demo-footer {
+        padding: 60px 0;
+        text-align: center;
+        }
+        .demo-footer a {
+        color: #999;
+        display: inline-block;
+        font-family: Cardo;
+        }
+        
+        </style>
+        <!----Time line Css for About us Page Design End-->
+        </head>
+
+
+
+   <!---Header Added-->
+   <header>
+    <nav>
+      <div class="wrapper">
+        <div class="logo"><a href="#">MITSOL</a></div>
+        <input type="radio" name="slider" id="menu-btn">
+        <input type="radio" name="slider" id="close-btn">
+        <ul class="nav-links">
+          <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li>
+            <a href="#" class="desktop-item">Services</a>
+            <input type="checkbox" id="showMega">
+            <label for="showMega" class="mobile-item">Services</label>
+            <div class="mega-box">
+              <div class="content">
+                <div class="row">
+                 
+                  <ul class="mega-links">
+                    <li><a href="digital-marketing.html">Digital Marketing</a></li>
+                    <p>
+                      We plan to cause your business to develop on the grounds that your prosperity is our prosperities
+                    </p>
+                  </ul>
+                  <ul class="mega-links">
+                    <li><a href="">Website Development</a></li>
+                    <p>
+                      We've covered "what is WordPress" and "what is WordPress utilized for" yet to comprehend its advantages.
+                    </p>
+                  </ul>
+                  <ul class="mega-links">
+                    <li><a href="#">UI/UX Designing</a></li>
+                    <p>
+                      
+                    In a nutshell UI/UX design makes IT item that clients want to utilize. The objective of UI sketch is creating buyer interfaces
+                    </p>
+                  </ul>
+                  
+                </div>
+                <div class="row">
+                  <ul class="mega-links">
+                    <li><a href="#">Mobile Application Development</a></li>
+                    <p>
+                      Mitsol's mixture versatile application development improvement group is very capable.
+                    </p>
+                  </ul>
+                  <ul class="mega-links">
+                    <li><a href="#">Video Editing</a></li>
+                    <p>
+                      From a specialized point of view, videography alludes to the computerized seize of moving photos
+                    </p>
+                  </ul>
+                  <ul class="mega-links">
+                    <li><a href="#">Custom Development</a></li>
+                    <p>
+                      We give you an answer that addresses your issues, your guests' assumptions, and you will have command over your substance
+                    </p>
+                  </ul>
+
+                </div>
+                <div class="row">
+                  <img src="https://cdn.shopify.com/s/files/1/0667/6555/3895/files/web_developing.gif?v=1665571693" alt="">
+                </div>
+              </div>
+            </div>
+          </li>
+            
+          <li>
+            <a href="#" class="desktop-item">Services</a>
+            <input type="checkbox" id="showMega">
+            <label for="showMega" class="mobile-item">Mega Menu</label>
+            <div class="mega-box">
+              <div class="content">
+                <div class="row">
+                  <header>Digital Marketing</header>
+                  <ul class="mega-links">
+                    <li><a href="#">Graphics</a></li>
+                    <li><a href="#">Vectors</a></li>
+                    <li><a href="#">Business cards</a></li>
+                    <li><a href="#">Custom logo</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <header>Email Services</header>
+                  <ul class="mega-links">
+                    <li><a href="#">Personal Email</a></li>
+                    <li><a href="#">Business Email</a></li>
+                    <li><a href="#">Mobile Email</a></li>
+                    <li><a href="#">Web Marketing</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <header>Security services</header>
+                  <ul class="mega-links">
+                    <li><a href="#">Site Seal</a></li>
+                    <li><a href="#">VPS Hosting</a></li>
+                    <li><a href="#">Privacy Seal</a></li>
+                    <li><a href="#">Website design</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <img src="https://cdn.shopify.com/s/files/1/0667/6555/3895/files/web_developing.gif?v=1665571693" alt="">
+                </div>
+              </div>
+            </div>
+          </li>
+            
+        
+           
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="get-a-quote.html">Get a Quote</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+
+        </ul>
+          <a class="button-homepage" href="#" role="button">Book A Call</a>
+      
+       
+        <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+      </div>
+    </nav>
+     
+      
+ </header>
+  <!---Header Ended-->
+
+ <!--Video Editing Banner Started Section -->
+ <section class="video-editing-banner pt-7">
+  <div class="introduction-3">
+    <br>
+      <h2>VIDEO EDITING
+      </h2>
+      <br>
+      
+     <h1>Expert Video Editing <br>Services
+    </h1>
+     <br>
+     <p>Mitsol is a computerized showcasing organization that knows how to<br> help your web-based business' positioning and give its clients with<br> results that are above and beyond.</p>
+<br>
+<a class="button-left" href="#" role="button">SCHEDULE A CALL</a>
+
+  </div>
+</section>
+<!--Video Editing Banner Ended Section -->
+
+<!---BRANDS ADDED -->
+<section>
+    
+    <div class="brands p-2">
+        <h1 style="color: black; font-weight: 700; text-align: center;">Brands</h1>
+    </div>
+
+    <div class="container-fluid p-4">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-6">
+          <div class="col p-3">
+            <img src="https://www.mitsol.tech/assets/img/brands/brand8.svg" class="img-fluid" alt="Responsive image"> 
+          </div>
+          <div class="col">
+            <img src="https://www.mitsol.tech/assets/img/brands/brand5.svg">
+          </div>
+          <div class="col p-2"> 
+            <img src="https://www.mitsol.tech/assets/img/brands/brand7.svg">
+        </div>
+        <div class="col p-1"> 
+            <img src="https://www.mitsol.tech/assets/img/brands/brand6.svg">
+        </div>
+          <div class="col p-1">
+            <img src="https://www.mitsol.tech/assets/img/brands/brand3.svg">
+          </div>
+        </div>
+      </div>
+</section>
+<!---BRANDS ENDED->
+
+
+<!-Video Editing Services Crds SECTION ADD --->
+
+<div class="bg-white hi-display p-3 ">
+  <h1 style="color: black; font-weight: 700; text-align: center;">Video Editing Services
+  </h1>
+  <p style="color: #0467F1;; font-weight: 700; text-align: center;" >
+    
+    The process of modifying and rearranging video images in order to produce a new work is <br>known as video editing. Titling, shade correction, sound mixing, and other post-production
+    <br>
+    tasks are among the tasks that are commonly considered to be a part of the post-production
+    <br>
+    process.
+
+  </p>
+</div>
+<section class="card-container-3">
+  
+    
+
+    <div class="card">
+    
+     
+      <i class='fab fa-facebook fa-2x'>
+        Beta For Climp Champ Teams</i>
+		<p style="text-align: justify;">A new function called Clip champ Teams was developed to make it easier for you and your team members to collaborate on video projects. In Clip Champ, you can now make a team, invite collaborators, and edit video jobs.Add dynamic text, overlays, widgets, logos, and other animated objects to make your video more appealing.</p>
+    </div>
+  <div class="card">
+    <i class="fab fa-google fa-2x"> Can Modifiy Videos Eeasily.</i>
+            <p style="text-align: justify;">With the help of our video editor, anyone can make fantastic movies without a ride. In-browser editing of many footage of all sizes eliminates the need for inconvenient uploads. Before moving on to the video editor, you can even check out our quick and simple Facebook Video Ad Maker. Using break up screens is a great method to include more photographs while keeping the film short.</p>
+	</div>
+    <div class="card">
+      <i class="fab fa-microsoft fa-2x"> Adaptable Videos Template</i>
+        
+        
+            <p style="text-align: justify;">Have no ideas? Browse our collection of completely editable video templates that have been specially designed for your industry by professionals. Avoid the clean canvas frights by simply changing the wording and exporting! From YouTube channel movies to Instagram promotion films, we have every single assignment included.</p>
+        </div>
+        <div class="card">
+          <i class="fab fa-microsoft fa-2x"> Providing Video Editing Since 2014</i>
+            
+            
+                <p style="text-align: justify;">
+                  Since 2014, we have been developing original, proprietary technology to stream video online. Tens of millions of people around the world have benefited from our progressive compression technique, built-in privacy, and browser-based video enhancement in this short amount of time. When you consider that 2014, we have been developing special, confidential science to transmit videos.</p>
+            </div>
+            <div class="card">
+              <i class="fab fa-microsoft fa-2x"> Easily And Quickly Generate A Video</i>
+                
+                
+                    <p style="text-align: justify;">Objects of Editing A video can be edited for a variety of reasons, and your editing strategy will depend on the results you hope to achieve. Your editing goals should be well defined before you start, and they may include any of the following: Delete any irrelevant video The easiest and most typical editing duty is this one. Many videos can be significantly enhanced by removing the undesirable or defective portions.</p>
+                </div>
+                
+	
+  </div>
+  
+</div>
+
+
+</div>
+
+  </section>
+</section> 
+
+<!--Video Editing Services Crds SECTION END --->
+
+
+
+ 
+
+
+ <!--Let's Work Together To Turn Your Project Into A Reality! Banner Started Section -->
+ <section class="work-together pt-7">
+  <div class="introduction">
+    
+      <br>
+      
+     <h1 style="font-size: 50px; font-weight: 800;"> Let's Work Together To Turn <br> Your Project Into A Reality!
+     </h1>
+     <br>
+     <p>We're happy to hear your project goals and turn them into a next-level digital<br> product.Get a free consultation to make this happen!</p>
+<br>
+<a class="button-left" href="#" role="button">SCHEDULE A CALL</a>
+  </div>
+</section>
+<!--Let's Work Together To Turn Your Project Into A Reality! Banner Ended Section -->
+
+
+
+<div class="bg-white p-5"> 
+
+</div>
+<!--Our Web Development Process Time Line Started Section-->
+
+<div class="timeline-container" id="timeline-1">
+  <div class="timeline-header">
+  <h2 class="timeline-header__title">Our Video Editing Process
+
+  </h2>
+  <h3 class="timeline-header__subtitle">“Right Here's How It All Works</h3>
+  </div>
+  <div class="timeline">
+    <div class="timeline-item" data-text="01 :  06-10-2022">
+    <div class="timeline__content"><img class="timeline__img" src="https://thumbs.dreamstime.com/b/abstract-technology-ui-futuristic-concept-hud-interface-hologram-elements-digital-data-chart-175429399.jpg"/>
+      <h5 class="timeline__content-title">Stabilizer
+
+      </h5>
+      <p class="timeline__content-desc">A stabiliser is an essential component of every production since it eliminates camera shake and ensures that your photos are always steady, regardless of whether you use a tripod, Steadicam, or mount. As both documentarians and wedding videographers are aware, some events lend themselves perfectly to being filmed handheld, but it's useful to have a stabiliser on hand in case you need to set up specific images in advance.</p>
+    </div>
+  </div>
+  <div class="timeline-item" data-text="02 :  06-10-2022">
+    <div class="timeline__content"><img class="timeline__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-ndv7NRDi7IOWJr3XCr5sDUqdzx9WGht1xQ&usqp=CAU"/>
+      <h2 class="timeline__content-title">Lighting Apparatus
+      </h2>
+      <p class="timeline__content-desc">The next step is defining consumer personas, use-cases, consumer flows, and consumer journey maps.</p>
+    </div>
+  </div>
+  <div class="timeline-item" data-text="03 :  06-10-2022">
+    <div class="timeline__content"><img class="timeline__img" src="https://www.remark-group.co.uk/wp-content/uploads/2019/03/Screenshot-2019-02-11-at-15.10.33.png"/>
+      <h2 class="timeline__content-title">Sound-Related Extras
+      </h2>
+      <p class="timeline__content-desc">To maintain the visual quality of your clips, proper lighting is crucial. Depending on the size of your setup, you might want to bring your own lighting to prevent flicker. You may need to chat with the venue planner if it's a DIY effort or if your crew doesn't have a lighting director to get a feel of how much light you'll be dealing with.</p>
+    </div>
+  </div>
+  <div class="timeline-item" data-text="04 :  06-10-2022">
+    <div class="timeline__content"><img class="timeline__img" src="https://f.hubspotusercontent00.net/hubfs/7809058/image1-3.png"/>
+      <h2 class="timeline__content-title">Several Lenses
+      </h2>
+      <p class="timeline__content-desc">For videographers, on-camera mics are quite useful, according to Miller. In particular settings and conditions, certain microphones perform better. Shotgun microphones are one of the best tools for recording sound on camcorders because they can prioritise the front sound while blocking out sounds coming from the sides and back.</p>
+    </div>
+  </div>
+  <div class="timeline-item" data-text="04 :  06-10-2022">
+    <div class="timeline__content"><img class="timeline__img" src="data:image/jpeg;base64,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"/>
+      <h2 class="timeline__content-title">Backups
+      </h2>
+      <p class="timeline__content-desc">Backups Because video consumes a lot of film, be careful to pack extra memory or SD cards in case your camera's storage becomes full.+</p>
+    </div>
+  </div>
+ 
+  </div>
+  </div>
+<!----Our Web Development Process Time line Ended Design-->
+
+
+
+
+
+
+
+
+
+
+
+<!---Frequently Asked Questions Add-->
+<section class="container-faq">
+  
+  
+  <h1>Frequently Asked Questions</h1>  
+
+
+  <ul class="faq-accordion text-md">
+    <li>
+      <input class="faq-input" type="radio" name="faq" id="faq-1" />
+      <label class="faq-label" for="faq-1">What can we do for your business? <i class='fa fa-plus blue-color'></i> </label>
+      <div class="faq-content">
+        <p>
+          By cooperating with customers to discuss needs and requirements, we are ready to achieve common understanding, win customers' trust and provide appropriate advice, and come up with reasonable new ideas to change your company. <br />
+          </p>
+      </div>
+    </li>
+
+    <li>
+      <input class="faq-input" type="radio" name="faq" id="faq-2" />
+      <label class="faq-label" for="faq-2">What are the benefits of Mitsol Technologies?<i class='fa fa-plus blue-color'></i> </label>
+      <div class="faq-content">
+        <p>Mitsol Technologies cares about every detail to ensure that the process works as expected and is acceptable. Mitsol ​​uses another feature called Minified Technology to get a set of customer data and create unique lighting.</p>
+      </div>
+    </li>
+
+    <li>
+      <input class="faq-input" type="radio" name="faq" id="faq-3" />
+      <label class="faq-label" for="faq-3">How to improve the work cycle?<i class='fa fa-plus blue-color'></i> </label>
+      <div class="faq-content">
+        <p>
+          We reduce highly complex designs with incorrect code writing and hard code writing to ensure that Mitsol Technologies ​​will work flawlessly and that the design is kept in the best possible order when it is viewed by a large number of mobile phones and programs. </p>
+      </div>
+    </li>
+
+    <li>
+      <input class="faq-input" type="radio" name="faq" id="faq-4" />
+      <label class="faq-label" for="faq-4">Engineering news and services<i class='fa fa-plus blue-color'></i> </label>
+      <div class="faq-content">
+        <p>Our team designs, architects, develops and deploys applications on cloud platforms. We work with Google GCP, Amazon AWS and other cloud technologies. Our team is experienced in working with all cloud-based solutions. We have a single solution available to ensure that your solution is covered for all security risks and aspects.</div>
+    </li>
+  </ul>
+</section>
+
+<!---Frequently Asked Questions Ended-->
+
+<!--Digital Marketing Services Crds SECTION ADD --->
+
+<div class="bg-white hi-display p-4 ">
+  <h1 style="color: black; font-weight: 700; text-align: center;">We Do UI/UX For</h1>
+  
+</div>
+<section class="card-container-5">
+  
+    
+
+    <div class="card">
+    
+     
+      <i class='fab fa-facebook fa-2x'>
+        WEB APPLICATION</i>
+	
+    </div>
+  <div class="card">
+    <i class="fab fa-google fa-2x"> MOBIL APPS</i>
+           
+	</div>
+    <div class="card">
+      <i class="fab fa-microsoft fa-2x"> SAAS APPS</i>
+        
+        
+            
+        </div>
+       
+            <div class="card">
+              <i class="fab fa-microsoft fa-2x"> AI</i>
+                
+                
+                   
+                </div>
+                <div class="card">
+                  <i class="fab fa-microsoft fa-2x"> BUSINESS APPS</i>
+                    
+                    
+                       </div>
+                    
+
+	
+  </div>
+  
+</div>
+
+
+</div>
+
+  </section>
+</section> 
+
+<!--Digital Marketing Services Crds SECTION END --->
+
+
+
+<!--Contact US Started-->
+<section class="contactus-1">
+  <div class="container-1">
+    <div style="text-align:center">
+      <h1>We’d Love To Hear From You
+      </h1>
+      <p>Get Custom Solutions, Recommendations, Resumes, Or, Estimates.<br> Confidentiality & Same Day Response Guaranteed!</p>
+    </div>
+    <div class="row-1">
+      <div class="column-1">
+        <img src="images/animation.gif" style="width:100%;height: 459px;padding-top: 30px;" ;="" height="252px" padding-top:="" 50px;="">   
+      </div>
+      <div class="column-1">
+        <form action="/action_page.php">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </div>
+  </section>
+  <!---Contact US  Ended-->
+
+<!---Start Your Business With Us Started-->
+<section class="last-banner">
+<div class="lastbookus">
+  <br>
+  <br>
+    <h1>Start Your Business With Us</h1>
+    <br>
+    <br>
+    <a class="button-left" href="#" role="button">Book a Call</a>
+</div>
+   
+  </div>
+</section>
+<!---Start Your Business With Us Ended-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!---Footer Started-->
+<footer class="section bg-footer">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-3">
+              <div class="">
+                  <h6 class="footer-heading text-uppercase text-white">MITSOL.</h6>
+                  <p class="contact-info mt-4 text-justify">Mitsol Technology - A leading offshore IT outsourcing company offers Custom Web, Mobile App & Software development services all over the globe. Also, we allocate dedicated expert teams to help agencies and businesses scale their Development,<br> Design & Digital Marketing capabilities.</p>
+                  
+                  
+              </div>
+              <div class="mt-3">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#"><i class="fab facebook footer-social-icon fa-facebook-f"></i></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fab twitter footer-social-icon fa-twitter"></i></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fab google footer-social-icon fa-google"></i></i></a></li>
+                    
+                </ul>
+            </div>
+          </div>
+          
+
+          <div class="col-lg-3">
+              <div class="">
+                  <h6 class="footer-heading text-uppercase text-white">Ressources</h6>
+                  <ul class="list-unstyled footer-link mt-4">
+                      <li><a href="">Website Development </a></li>
+                      <li><a href="">UI/UX Designing</a></li>
+                      <li><a href="">Mobile Application Development</a></li>
+                      <li><a href="">Digital Marketing</a></li>
+                      <li><a href="">Video Editing</a></li>
+                      <li><a href="">Custom Development</a></li>
+                  </ul>
+              </div>
+          </div>
+
+          <div class="col-lg-2">
+              <div class="">
+                  <h6 class="footer-heading text-uppercase text-white">Help</h6>
+                  <ul class="list-unstyled footer-link mt-4">
+                      <li><a href="">Home </a></li>
+                      <li><a href="">About Us</a></li>
+                      <li><a href="">Careers</a></li>
+                      <li><a href="">Get A Quote</a></li>
+                      <li><a href="">Contact Us</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="">
+                <h5 class="footer-heading text-uppercase text-white">Contact Info</h5>
+                <p class="item-heading widget-heading  h6 text-white">US Address</p>
+                <ul class="list-unstyled footer-link mt-4">
+                    <li><a href=""><i class="fa fa-map-marker" aria-hidden="true">  100 Pine St #2500, San Francisco, CA 94111, United States</i>
+                      <li><a href=""><i class="fa fa-mobile h6 text-white"></i>  +18632046184</i>
+                        <p class="item-heading widget-heading  h6 text-blue">Pakistan Address</p>
+                        <li><a href=""><i class="fa fa-map-marker" aria-hidden="true">  Ls-01, Bungalow No# C-65 Federal B Area Block 10 Gulberg Town, Karachi, Karachi City, Sindh</i>
+                          <li><a href=""><i class="fa fa-mobile h6 text-white"></i>  +923330188996</i>
+                            <li><a href=""><i class="fa fa-envelope h6 text-white">  info@mitsol.tech</i>
+                   
+                </ul>
+            </div>
+        </div>
+         
+
+      </div>
+  </div>
+
+  <div class="text-center mt-5">
+      <p class="footer-alt mb-0 f-14 text-white text-decoration-none">2022 © MITSOL, All Rights Reserved</p>
+  </div>
+</footer>
+
+<!---Footer Ended-->
+
+    <!----Script Added-->   
+    <script type="text/javascript" src="main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="lightbox-plus-jquery.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script src='https://rubaxa.github.io/Sortable/Sortable.js'></script><script  src="main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <!----Time Line Script Added-->
+        <script>
+        
+        (function($) {
+        $.fn.timeline = function() {
+        var selectors = {
+          id: $(this),
+          item: $(this).find(".timeline-item"),
+          activeClass: "timeline-item--active",
+          img: ".timeline__img"
+        };
+        selectors.item.eq(0).addClass(selectors.activeClass);
+        selectors.id.css(
+          "background-image",
+          "url(" +
+            selectors.item
+              .first()
+              .find(selectors.img)
+              .attr("src") +
+            ")"
+        );
+        var itemLength = selectors.item.length;
+        $(window).scroll(function() {
+          var max, min;
+          var pos = $(this).scrollTop();
+          selectors.item.each(function(i) {
+            min = $(this).offset().top;
+            max = $(this).height() + $(this).offset().top;
+            var that = $(this);
+            if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
+              selectors.item.removeClass(selectors.activeClass);
+              selectors.id.css(
+                "background-image",
+                "url(" +
+                  selectors.item
+                    .last()
+                    .find(selectors.img)
+                    .attr("src") +
+                  ")"
+              );
+              selectors.item.last().addClass(selectors.activeClass);
+            } else if (pos <= max - 40 && pos >= min) {
+              selectors.id.css(
+                "background-image",
+                "url(" +
+                  $(this)
+                    .find(selectors.img)
+                    .attr("src") +
+                  ")"
+              );
+              selectors.item.removeClass(selectors.activeClass);
+              $(this).addClass(selectors.activeClass);
+            }
+          });
+        });
+        };
+        })(jQuery);
+        
+        $("#timeline-1").timeline();
+        
+        </script>
+         <!----Time Line Script Ended-->
+
+
+    </body>
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

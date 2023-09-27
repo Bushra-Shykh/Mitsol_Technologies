@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitsol Tech</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.scss">
+    <link rel="stylesheet" href="lightbox.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,600;1,300;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+
+</head>
+<body>
+   <!---Header Added-->
+   <header>
+    <nav>
+      <div class="wrapper">
+        <div class="logo"><a href="#">MITSOL</a></div>
+        <input type="radio" name="slider" id="menu-btn">
+        <input type="radio" name="slider" id="close-btn">
+        <ul class="nav-links">
+          <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li>
+            <a href="#" class="desktop-item">Services</a>
+            <input type="checkbox" id="showMega">
+            <label for="showMega" class="mobile-item">Services</label>
+            <div class="mega-box">
+              <div class="content">
+                <div class="row">
+                 
+                  <ul class="mega-links">
+                    <li><a href="digital-marketing.html">Digital Marketing</a></li>
+                    <p>
+                      We plan to cause your business to develop on the grounds that your prosperity is our prosperities
+                    </p>
+                  </ul>
+                  <ul class="mega-links">
+                    <li><a href="">Website Development</a></li>
+                    <p>
+                      We've covered "what is WordPress" and "what is WordPress utilized for" yet to comprehend its advantages.
+                    </p>
+                  </ul>
+                  <ul class="mega-links">
+                    <li><a href="#">UI/UX Designing</a></li>
+                    <p>
+                      
+                    In a nutshell UI/UX design makes IT item that clients want to utilize. The objective of UI sketch is creating buyer interfaces
+                    </p>
+                  </ul>
+                  
+                </div>
+                <div class="row">
+                  <ul class="mega-links">
+                    <li><a href="#">Mobile Application Development</a></li>
+                    <p>
+                      Mitsol's mixture versatile application development improvement group is very capable.
+                    </p>
+                  </ul>
+                  <ul class="mega-links">
+                    <li><a href="#">Video Editing</a></li>
+                    <p>
+                      From a specialized point of view, videography alludes to the computerized seize of moving photos
+                    </p>
+                  </ul>
+                  <ul class="mega-links">
+                    <li><a href="#">Custom Development</a></li>
+                    <p>
+                      We give you an answer that addresses your issues, your guests' assumptions, and you will have command over your substance
+                    </p>
+                  </ul>
+
+                </div>
+                <div class="row">
+                  <img src="https://cdn.shopify.com/s/files/1/0667/6555/3895/files/web_developing.gif?v=1665571693" alt="">
+                </div>
+              </div>
+            </div>
+          </li>
+            
+          <li>
+            <a href="#" class="desktop-item">Services</a>
+            <input type="checkbox" id="showMega">
+            <label for="showMega" class="mobile-item">Mega Menu</label>
+            <div class="mega-box">
+              <div class="content">
+                <div class="row">
+                  <header>Digital Marketing</header>
+                  <ul class="mega-links">
+                    <li><a href="#">Graphics</a></li>
+                    <li><a href="#">Vectors</a></li>
+                    <li><a href="#">Business cards</a></li>
+                    <li><a href="#">Custom logo</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <header>Email Services</header>
+                  <ul class="mega-links">
+                    <li><a href="#">Personal Email</a></li>
+                    <li><a href="#">Business Email</a></li>
+                    <li><a href="#">Mobile Email</a></li>
+                    <li><a href="#">Web Marketing</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <header>Security services</header>
+                  <ul class="mega-links">
+                    <li><a href="#">Site Seal</a></li>
+                    <li><a href="#">VPS Hosting</a></li>
+                    <li><a href="#">Privacy Seal</a></li>
+                    <li><a href="#">Website design</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <img src="https://cdn.shopify.com/s/files/1/0667/6555/3895/files/web_developing.gif?v=1665571693" alt="">
+                </div>
+              </div>
+            </div>
+          </li>
+            
+        
+           
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="get-a-quote.html">Get a Quote</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+
+        </ul>
+          <a class="button-homepage" href="#" role="button">Book A Call</a>
+      
+       
+        <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+      </div>
+    </nav>
+     
+      
+ </header>
+  <!---Header Ended-->
+    <section class="home" id="home">
+		<div class="home-text">
+			<div class="slide"><br><br>
+				<span class="s-one">WE PROVIDE</span><br>
+			</div>
+			<h1 style="color:#fff; font-weight: 700;">Best IT Services And <span> <br> Solutions.</span></h1>
+			<p style="color:#fff;">Mitsol is a computerized showcasing organization that knows how<br> to help your web-based business'
+                 positioning and give its clients with <br> results that are above and beyond.</p>
+                 <a class="button-left" href="#" role="button">Link</a>
+
+                 </div>    
+		</div>
+	</section>
+<!---BRANDS ADDED -->
+<section>
+    <div class="brands p-2">
+        <h1 style="color: black; font-weight: 700; text-align: center;">Brands</h1>
+    </div>
+
+    <div class="container-fluid p-4">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-6">
+          <div class="col p-3">
+            <img src="https://www.mitsol.tech/assets/img/brands/brand8.svg" class="img-fluid" alt="Responsive image"> 
+          </div>
+          <div class="col">
+            <img src="https://www.mitsol.tech/assets/img/brands/brand5.svg">
+          </div>
+          <div class="col p-2"> 
+            <img src="https://www.mitsol.tech/assets/img/brands/brand7.svg">
+        </div>
+        <div class="col p-1"> 
+            <img src="https://www.mitsol.tech/assets/img/brands/brand6.svg">
+        </div>
+          <div class="col p-1">
+            <img src="https://www.mitsol.tech/assets/img/brands/brand3.svg">
+          </div>
+        </div>
+      </div>
+</section>
+<!---BRANDS ENDED->
+
+<!-Introduction Started Section -->
+<section>
+    <div class="introduction">
+        <h2>OUR INTRODUCTION</h2>
+        <br>
+        <br>
+       <h1>On Good Firms, Mitsol  Is Rated As<br> An Excellent Digital Service<br> Company</h1>
+       <br>
+       <p>We design and develop scalable, high-performing digital solutions to address the<br> business concerns of our clients. Our services focus on Mobility Solutions, Web <br>Application Development, Cloud Solutions, IoT, AR/VR, Blockchain, Artificial Intelligence &<br> Machine Learning, Predictive
+         Analytics & Big Data Solutions, and several other trending<br> and emerging technologies.</p>
+         <br>
+         <br>
+    </div>
+</section>
+
+<!--Introduction Ended Section --->
+
+<!--Our Services Section -->
+<section class="cards pt-5">
+<h2>OUR SERVICES</h2>
+        <br>
+        <br>
+        <h1>Our Software Development &<br> Digital Transformation Consulting<br> Services</h1>
+<div class="container">
+    <div class="grid">
+        <div class="card">
+            <div class="card_img">
+                <img src="https://i2.wp.com/s3-us-west-2.amazonaws.com/content.edupristine.com/images/blogs/6-Aspects-of-Digital-Marketing-you-should-Know.jpg?resize=1280%2C720&ssl=10" alt="">
+            </div>
+            <div class="card_body">
+                <h3 class="card_title">Get yourself motivated</h3>
+                <p style="text-align: justify;">In this ever-evolving digital landscape, our best-in-class web development services, which include mobile web designs, custom websites, static and dynamic websites, platform engineering, and intranet experiences, provide our clients with
+                     significant value and deliver tangible business results.</p>
+                <p class="card_author">by <a href="#" class="author_link">MITSOL.</a></p>
+                <a class="button-left" href="#" role="button">Link</a> 
+            </div>
+        </div>
+        <div class="card">
+            <div class="card_img">
+                <img src="images/development.png" alt="">
+            </div>
+            <div class="card_body">
+                <h3 class="card_title">Learn the art of cooking</h3>
+                <p style="text-align: justify;">In this ever-evolving digital landscape, our best-in-class web development services, which include mobile web designs, custom websites, static and dynamic websites, platform engineering, and intranet experiences, provide our clients with
+                    significant value and deliver tangible business results.</p>
+                <p class="card_author">by <a href="#" class="author_link">MITSOL.</a></p>
+
+                <a class="button-left" href="#" role="button">Link</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card_img">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdzoAJBuSFwJjT3u36jiHwE1xrzcVLTrxf0paOrWUAZI56kSQsdOLbNy5UEMkH-Sn0C6c&usqp=CAU" alt="">
+            </div>
+            <div class="card_body">
+                <h3 class="card_title">Get your freedom</h3>
+                <p style="text-align: justify;">In this ever-evolving digital landscape, our best-in-class web development services, which include mobile web designs, custom websites, static and dynamic websites, platform engineering, and intranet experiences, provide our clients with
+                    significant value and deliver tangible business results.</p>
+                <p class="card_author">by <a href="#" class="author_link">MITSOL.</a></p>
+                 <a class="button-left" href="#" role="button">Link</a>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!--Our Services Section Ended -->
+
+
+<!---Banner Featured Insight Started--> 
+<section class="section banner-business">
+<div class="banner">
+    <h2>FEATURED INSIGHTS</h2>
+    <h1>Managing Development<br> Organizations At A Distance:<br> The 2022 Report
+    </h1>
+        <a class="button-left" href="#" role="button">Link</a>
+      
+</section> 
+<!---Banner Featured Insight Ended--> 
+
+<!---Case Studies Some of our Work Started--> 
+<section>
+    <div class="case-studies">
+        <h2>CASE STUDIES</h2>
+        <h1>Some Of Our Work</h1>   
+</section>
+
+<!---Case Studies Some of our Work Ended--> 
+
+<!---Banner Why Chose MITSOL Technologies Started-->
+<section class="whychosemitsol">
+    <h1>
+    
+    </h1>
+</section>
+<!---Banner Why Chose MITSOL Technologies Ended-->
+
+<!---Several Assets Cards Started-->
+<section class="assets">
+    <div class=" cards-assets">
+    </div>
+    
+</section>
+<!---Several Assets  Cards Ended-->
+
+
+<!---Our Amazing Gallery Started-->
+<section class="messonary">
+ 
+  <h2>CASE STUDIES</h2>
+  <h1>Some Of Our Work</h1>   
+
+
+    <div class="gallery" id="gallery">
+        <div class="gallery-item">
+            <div class="content"><img src="https://b2569356.smushcdn.com/2569356/wp-content/uploads/2020/11/AdobeStock_241083104-1400x934.jpg?size=1400x934&lossy=1&strip=1&webp=1" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://prod-discovery.edx-cdn.org/media/course/image/4633ab16-80c5-48c4-a656-564b89bf4349-cc99a1b889e3.small.png" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://res.cloudinary.com/highereducation/images/f_auto,q_auto/v1662131717/ComputerScience.org/CompSci_WebDev_Career_WebDev_day0in0life_4030594ab/CompSci_WebDev_Career_WebDev_day0in0life_4030594ab.jpg?_i=AA" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="images/4.png" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOZFg5ksJ0_s4S1Gc-f-6KTD8e1D7YN5JYyZ4SoFXc8SwvSJ3pva7diOWsiKdzlY-BLLw&usqp=CAU" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="images/6.png" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="images/7.png" alt=""></div>
+        </div>
+        
+        <div class="gallery-item">
+            <div class="content"><img src="images/9.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://intellicominc.com/Portals/0/EasyDNNnews/88/img-HardwareSoftware-Resale.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTctszrHq73-eAYUS4mNMtCMeOHOenhYwg5H6B_emAUlXmo2KgJM8W9-b0rYld5NQOyw9k&usqp=CAU" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbQ9Lqqas3U1YFTHDrxWYDUP855cdZuX6O9ylAz8NaniJXxCJVAQ7GGItJhnTBxj1q4zY&usqp=CAU" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,pass" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,bigger" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,number" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,feature" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://s3.amazonaws.com/www-inside-design/uploads/2018/09/careerfoundry-ux-square-320x320.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,railroad" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIrUwBJ_zGg3cDFDuu1dIidW0I2JLCddvQjdoS9xVGrqURV7WLlRUlLAZTJc4v_mFsFgE&usqp=CAU" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu8tulB4zF7X2Zgji0j-4WLd-oiyKeuH-OUt1B8KvSWIy8AU8QqUCDwgtpsHz6e8k6TnM&usqp=CAU" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdSWU3EHMK9dNx-yHsY2AbMZRhqOpgEsPVugtE1gLDbZ6MhTzQCoyJqAgEJJ_dtiKWJYM&usqp=CAU" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="images/9.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,cell" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,bag" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://prod-discovery.edx-cdn.org/media/course/image/4633ab16-80c5-48c4-a656-564b89bf4349-cc99a1b889e3.small.png" alt=""></div>
+        </div>
+    </div>
+  </div>
+     
+</section>
+<!---Frequently Asked Questions Ended-->
+<section class="container-faq">
+  
+  
+  <h1>Frequently Asked Questions</h1>  
+
+
+  <ul class="faq-accordion text-md">
+    <li>
+      <input class="faq-input" type="radio" name="faq" id="faq-1" />
+      <label class="faq-label" for="faq-1">What can we do for your business?<i class="fa fa-add"></i> </label>
+      <div class="faq-content">
+        <p>
+          By cooperating with customers to discuss needs and requirements, we are ready to achieve common understanding, win customers' trust and provide appropriate advice, and come up with reasonable new ideas to change your company. <br />
+          </p>
+      </div>
+    </li>
+
+    <li>
+      <input class="faq-input" type="radio" name="faq" id="faq-2" />
+      <label class="faq-label" for="faq-2">What are the benefits of Mitsol Technologies?<i class="fa fa-add"></i></label>
+      <div class="faq-content">
+        <p>Mitsol Technologies cares about every detail to ensure that the process works as expected and is acceptable. Mitsol ​​uses another feature called Minified Technology to get a set of customer data and create unique lighting.</p>
+      </div>
+    </li>
+
+    <li>
+      <input class="faq-input" type="radio" name="faq" id="faq-3" />
+      <label class="faq-label" for="faq-3">How to improve the work cycle?<i class="fa fa-add"></i></label>
+      <div class="faq-content">
+        <p>
+          We reduce highly complex designs with incorrect code writing and hard code writing to ensure that Mitsol Technologies ​​will work flawlessly and that the design is kept in the best possible order when it is viewed by a large number of mobile phones and programs. </p>
+      </div>
+    </li>
+
+    <li>
+      <input class="faq-input" type="radio" name="faq" id="faq-4" />
+      <label class="faq-label" for="faq-4">Engineering news and services<i class="fa fa-add"></i></label>
+      <div class="faq-content">
+        <p>Our team designs, architects, develops and deploys applications on cloud platforms. We work with Google GCP, Amazon AWS and other cloud technologies. Our team is experienced in working with all cloud-based solutions. We have a single solution available to ensure that your solution is covered for all security risks and aspects.</div>
+    </li>
+  </ul>
+</section>
+
+
+<!---Contact US Started-->
+<section class="contact-us-info">
+<div class="container">
+  <div class="section-contact">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10 col-xl-8">
+        <div class="header-section text-center">
+          <h2 class="title">Get In Touch
+            <span class="dot"></span>
+            <span class="big-title">CONTACT</span>
+          </h2>
+          <p class="description">Get Custom Solutions, Recommendations, Resumes, Or, Estimates. Confidentiality & Same Day Response Guaranteed!</p>
+          
+        </div>
+      </div>
+    </div>
+    <div class="form-contact">
+      <form>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="single-input">
+              <i class="fas fa-user"></i>
+              <input type="text" name="name" placeholder="ENTER YOUR NAME">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="single-input">
+              <i class="fas fa-envelope"></i>
+              <input type="text" name="email" placeholder="ENTER YOUR EMAIL">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="single-input">
+              <i class="fas fa-phone"></i>
+              <input type="text" name="phoneNumber" placeholder="ENTER YOUR PHONE NUMBER">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="single-input">
+              <i class="fas fa-check"></i>
+              <input type="text" name="subject" placeholder="ENTER YOUR SUBJECT">
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="single-input">
+              <i class="fas fa-comment-dots"></i>
+              <textarea placeholder="ENTER YOUR MESSAGE"></textarea>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="submit-input text-center">
+              <input type="submit" name="submit" value="SUBMIT NOW">
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+</section>
+<!---Contact US  Ended-->
+
+
+<!---Start Your Business With Us Started-->
+<section class="last-banner">
+<div class="lastbookus">
+    <h1>Start Your Business With Us</h1>
+    <br>
+    <a class="button-left" href="#" role="button">Book a Call</a>
+</div>
+   
+  </div>
+</section>
+<!---Start Your Business With Us Ended-->
+
+
+<!---Footer Started-->
+<footer class="section bg-footer">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-3">
+              <div class="">
+                  <h6 class="footer-heading text-uppercase text-white">Information</h6>
+                  <ul class="list-unstyled footer-link mt-4">
+                      <li><a href="">Pages</a></li>
+                      <li><a href="">Our Team</a></li>
+                      <li><a href="">Feuchers</a></li>
+                      <li><a href="">Pricing</a></li>
+                  </ul>
+              </div>
+          </div>
+
+          <div class="col-lg-3">
+              <div class="">
+                  <h6 class="footer-heading text-uppercase text-white">Ressources</h6>
+                  <ul class="list-unstyled footer-link mt-4">
+                      <li><a href="">Monitoring Grader </a></li>
+                      <li><a href="">Video Tutorial</a></li>
+                      <li><a href="">Term &amp; Service</a></li>
+                      <li><a href="">Zeeko API</a></li>
+                  </ul>
+              </div>
+          </div>
+
+          <div class="col-lg-2">
+              <div class="">
+                  <h6 class="footer-heading text-uppercase text-white">Help</h6>
+                  <ul class="list-unstyled footer-link mt-4">
+                      <li><a href="">Sign Up </a></li>
+                      <li><a href="">Login</a></li>
+                      <li><a href="">Terms of Services</a></li>
+                      <li><a href="">Privacy Policy</a></li>
+                  </ul>
+              </div>
+          </div>
+
+          <div class="col-lg-4">
+              <div class="">
+                  <h6 class="footer-heading text-uppercase text-white">Contact Us</h6>
+                  <p class="contact-info mt-4">Contact us if need help withanything</p>
+                  <p class="contact-info">+01 123-456-7890</p>
+                  <div class="mt-5">
+                      <ul class="list-inline">
+                          <li class="list-inline-item"><a href="#"><i class="fab facebook footer-social-icon fa-facebook-f"></i></i></a></li>
+                          <li class="list-inline-item"><a href="#"><i class="fab twitter footer-social-icon fa-twitter"></i></i></a></li>
+                          <li class="list-inline-item"><a href="#"><i class="fab google footer-social-icon fa-google"></i></i></a></li>
+                          <li class="list-inline-item"><a href="#"><i class="fab apple footer-social-icon fa-apple"></i></i></a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+  </div>
+
+  <div class="text-center mt-5">
+      <p class="footer-alt mb-0 f-14">2019 © Anup, All Rights Reserved</p>
+  </div>
+</footer>
+
+<!---Footer Ended-->
+
+
+
+  
+   
+<script type="text/javascript" src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="lightbox-plus-jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+   
+</body>
+</html>
